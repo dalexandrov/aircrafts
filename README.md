@@ -16,6 +16,12 @@ java -jar --enable-preview target/aircrafts.jar
 curl -X GET  http://localhost:8080/aircraft/LZ-001
 ```
 
+then:
+
+```
+curl -X GET  http://localhost:8080/aircraft/LZ-CGP
+```
+
 ## Try health and metrics
 
 ```

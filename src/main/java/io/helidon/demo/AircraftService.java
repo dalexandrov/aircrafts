@@ -4,13 +4,17 @@ import io.helidon.webserver.Routing;
 import io.helidon.webserver.ServerRequest;
 import io.helidon.webserver.ServerResponse;
 import io.helidon.webserver.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class AircraftService implements Service {
 
-    private Map<String, Aircraft> aircrafts;
+    private static final Logger looger = LoggerFactory.getLogger(AircraftService.class);
+
+    private final Map<String, Aircraft> aircrafts;
 
     public AircraftService() {
         aircrafts = new HashMap<>();
@@ -26,6 +30,7 @@ public class AircraftService implements Service {
     private void getAircraftInfo(ServerRequest request,
                                  ServerResponse response) {
         String reg = request.path().param("reg");
+        looger.info("Requested information for: "+reg);
         Aircraft aircraft = aircrafts.get(reg);
         String info = getInfo(aircraft);
         response.send(info);
