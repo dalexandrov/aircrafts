@@ -1,4 +1,4 @@
-# Helidon SE Bare
+# Helidon SE Aircrafts app
 
 Minimal Helidon SE project demonstrating the newest Java 17 features
 
