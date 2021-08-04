@@ -4,17 +4,16 @@ Minimal Helidon SE project demonstrating the newest Java 17 features
 
 ## Build and run
 
-With JDK11+
+With JDK17+
 ```bash
 mvn package
-java -jar target/bare-se.jar
+java -jar --enable-preview target/aircrafts.jar 
 ```
 
 ## Exercise the application
 
 ```
 curl -X GET  http://localhost:8080/aircraft/LZ-001
-{"message":"Hello World!"}
 ```
 
 ## Try health and metrics

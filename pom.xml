@@ -9,10 +9,10 @@
         <version>2.3.2</version>
         <relativePath/>
     </parent>
-    <groupId>me.buzz-helidon</groupId>
-    <artifactId>io.helidon.demo</artifactId>
+    <groupId>io.helidon.demo</groupId>
+    <artifactId>aircrafts</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>aircrafts</name>
+    <name>Aircrafts</name>
 
     <properties>
         <mainClass>io.helidon.demo.Main</mainClass>
