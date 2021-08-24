@@ -20,7 +20,7 @@ spec:
         podSpec:
           containers:
             - name: aircraft-container
-              image: "phx.ocir.io/stevengreenberginc/devlive/aircrafts:latest"
+              image: "fra.ocir.io/stevengreenberginc/devlive/aircrafts:latest"
               ports:
                 - containerPort: 8080
                   name: http
