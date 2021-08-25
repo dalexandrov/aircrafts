@@ -36,7 +36,7 @@ public class AircraftService implements Service {
         response.send(info);
     }
 
-    private String getInfo(Object o){
+    private String getInfo(Aircraft o){
         return switch(o){
             case CargoPlane cargoPlane      ->  String.format("Cargo plane with registration %s and max load of %d with max range of %d",
                     cargoPlane.getRegistration(), cargoPlane.getMaxLoad(), cargoPlane.maxRange());
