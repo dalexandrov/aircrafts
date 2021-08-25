@@ -1,0 +1,26 @@
+# Copyright (c) 2020, 2021, Oracle and/or its affiliates.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+apiVersion: core.oam.dev/v1alpha2
+kind: Component
+metadata:
+  name: aircraft
+  namespace: aircraft
+spec:
+  workload:
+    apiVersion: oam.verrazzano.io/v1alpha1
+    kind: VerrazzanoHelidonWorkload
+    metadata:
+      name: aircraft-workload
+      labels:
+        app: aircraft
+    spec:
+      deploymentTemplate:
+        metadata:
+          name: aircraft-deployment
+        podSpec:
+          containers:
+            - name: aircraft-container
+              image: "fra.ocir.io/stevengreenberginc/devlive/aircrafts:latest"
+              ports:
+                - containerPort: 8080
+                  name: http
