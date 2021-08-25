@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class AircraftService implements Service {
 
-    private static final Logger looger = LoggerFactory.getLogger(AircraftService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AircraftService.class);
 
     private final Map<String, Aircraft> aircrafts;
 
@@ -30,7 +30,7 @@ public class AircraftService implements Service {
     private void getAircraftInfo(ServerRequest request,
                                  ServerResponse response) {
         String reg = request.path().param("reg");
-        looger.info("Requested information for: "+reg);
+        LOGGER.info("Requested information for: "+reg);
         Aircraft aircraft = aircrafts.get(reg);
         String info = getInfo(aircraft);
         response.send(info);
